@@ -1,0 +1,52 @@
+.item {
+  width: 30%;
+
+  background: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+  margin-bottom: 50px;
+  border: 1px solid rgb(201, 231, 255);
+  border-radius: 20px;
+
+  & img {
+    width:100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 500ms ease;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  & p {
+    margin-right: 50px;
+    text-align: left;
+    margin-left: 50px;
+    font-size: large;
+    margin-bottom: 20px;
+  }
+  & b{
+    font-size: x-large;
+    color: #0ea600;
+  }
+  &__add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #ca5252;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+    font-size: large;
+
+    &:hover {
+      transform: scale(1.2) translateY(-5px);
+    }
+  }
+}
