@@ -16,6 +16,7 @@ services:
     build:
       context: ./API
       dockerfile: Dockerfile
+    restart: always
     # env_file:
     #   - .env
     ports:
