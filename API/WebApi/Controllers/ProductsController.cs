@@ -30,7 +30,7 @@ namespace WebApi.Controllers
             if (!string.IsNullOrEmpty(name))
             {
                 var lowerName = name.ToLower();
-                query = query.Where(p => p.Name.ToLower().Contains(name));
+                query = query.Where(p => p.Name.ToLower().Contains(lowerName));
             }
 
             if (!string.IsNullOrEmpty(categoryIds))
