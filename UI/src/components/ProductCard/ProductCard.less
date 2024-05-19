@@ -1,0 +1,86 @@
+@import "../../common.less";
+.product-card {
+  height: auto;
+  background: white;
+  overflow: hidden;
+  position: relative;
+  margin: 20px;
+  margin-bottom: 50px;
+  border: 1px solid @header-color;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 10px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  
+  & .block {
+    display: block;
+  }
+  & div {
+    display: flex;
+  }
+  &__name {
+    font-size: 2.5em;
+    max-width: 600px;
+  }
+  &__description {
+    width: 500px;
+    margin: 0 20px;
+    & p {
+      font-size: @text-size-large;
+    }
+  }
+  &__image {
+    width: 500px;
+    height: 500px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+      border-radius: 20px;
+    }
+  }
+  &__button {
+    background-color: #e2ffdb;
+    width: 60px;
+    height: 60px;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 16px;
+    margin-left: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: #86ff67;
+    }
+
+    &:disabled {
+      background-color: #d6d6d6;
+      cursor: not-allowed;
+    }
+
+    &--modify {
+      background-color: #fff6d0;
+      &:hover {
+        background-color: #ffeea2;
+      }
+    }
+  }
+  &__left {
+    font-size: @text-size-large;
+    color: #8c8c8c;
+  }
+  &__price {
+    font-size: 3em;
+    font-weight: bolder;
+    color: @header-color;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+  }
+}

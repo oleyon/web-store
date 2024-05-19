@@ -1,0 +1,42 @@
+@import "../../common.less";
+.cart-page {
+  &__summary {
+    height: 60px;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    margin-bottom: 50px;
+    border: 1px solid @header-color;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: @text-size-large;
+    & > div {
+        display: flex;
+        min-width: 300px;
+    }
+    & button {
+      width: 300px;
+      height: 50px;
+      border: solid 1px;
+      border-radius: 20px;
+      color: #00cc00;
+      background-color: #e4ffe4;
+      font-size: @text-size-huge;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        background-color: #c2ffc2;
+      }
+    }
+    & p {
+      font-weight: bold;
+      margin-left: 10px;
+    }
+  }
+}

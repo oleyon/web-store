@@ -1,0 +1,65 @@
+@import "../../common.less";
+.product-form {
+  max-width: 600px;
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid;
+  background-color: #ffffffae;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: @text-size-large;
+  & h2 {
+    margin-bottom: 20px;
+  }
+
+  & input[type="text"], input[type="number"], input[type="file"], textarea {
+    font-size: @text-size-large;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: black;
+    display: block;
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  & textarea {
+    height: 200px;
+    resize: vertical;
+  }
+
+  & button {
+    font-size: @text-size-large;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: @header-color;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+  &__error-message {
+    color: red;
+  }
+  &__categories {
+    display: flex;
+    text-align: left;
+  }
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+  }
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}

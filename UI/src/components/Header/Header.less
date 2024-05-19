@@ -1,24 +1,26 @@
+@import "../../common.less";
 .header {
-  background-color: #5e7bff;
-  color: #fff;
+  background-color: @header-color;
+  color: @text-color-white;
   padding: 1rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   box-sizing: border-box;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   z-index: 1000;
   &__logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #fff;
+    color: inherit;
     text-decoration: none;
     display: flex;
   }
   &__nav {
-    font-size: x-large;
+    font-size: @text-size-huge;
     & ul {
       list-style-type: none;
       padding: 0;
@@ -27,7 +29,7 @@
         display: inline;
         margin-right: 1rem;
         & a {
-          color: #fff;
+          color: inherit;
           text-decoration: none;
         }
       }

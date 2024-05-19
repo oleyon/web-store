@@ -1,3 +1,4 @@
+@import "../../common.less";
 .auth-form {
   max-width: 600px;
   width: 400px;
@@ -6,12 +7,17 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: large;
+  font-size: @text-size-large;
   & h2 {
     margin-bottom: 20px;
   }
 
   & input {
+    font-size: @text-size-large;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: black;
     display: block;
     width: 94%;
     padding: 10px;
@@ -22,10 +28,11 @@
   }
 
   & button {
+    font-size: @text-size-large;
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: @header-color;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -34,5 +41,8 @@
     &:hover {
       background-color: #0056b3;
     }
+  }
+  &__error-message {
+    color: red;
   }
 }

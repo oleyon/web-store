@@ -1,15 +1,25 @@
-import './Item.less'
+import "./Item.less";
+import defaultImage from "/img/empty-img.png";
 
 function Item(props) {
+  const handleImageError = (event) => {
+    event.preventDefault();
+    event.target.src = defaultImage;
+  };
   return (
-    <div className='item'>
-      <img src={"./img/" + props.item.img} onClick={() => props.onShowItem(props.item)} />
-      <h2>{props.item.title}</h2>
-      <p>{props.item.desc}</p>
-      <b>{props.item.price}₽</b>
-      <div className='item__add-to-cart' onClick={()=>props.onAdd(props.item)}>+</div>
+    <div className="item">
+      <div className="item__image">
+        <img
+          src={import.meta.env.VITE_API_BASE_URL + props.item.imageUrl}
+          onClick={() => props.onShowItem(props.item)}
+          onError={handleImageError}
+        />
+      </div>
+
+      <div className="item__price">{props.item.price}₽</div>
+      <div className="item__name">{props.item.name}</div>
     </div>
-  )
+  );
 }
 
 export default Item;

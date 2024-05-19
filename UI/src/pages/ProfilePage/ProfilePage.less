@@ -1,0 +1,51 @@
+@import "../../common.less";
+.profile-page {
+  & > h1 {
+    margin-bottom: 10px;
+  }
+  &__status {
+    &-button {
+      width: 100px;
+      height: 40px;
+      margin-left: 20px;
+      border-radius: 20px;
+      border: solid 1px;
+      border-color: black;
+      background-color: white;
+      cursor: pointer;
+    }
+    &--all {
+      color: black;
+    }
+    &--pending {
+      color: orange;
+    }
+    &--delivered {
+      color: #00cc00;
+    }
+    &--completed {
+      color: @header-color;
+    }
+    &--cancelled {
+      color: red;
+    }
+    &--selected {
+      background-color: #c7d2ff;
+    }
+  }
+  &__logout {
+    position: absolute;
+    top: 105px;
+    right: 75px;
+    padding: 10px 20px;
+    font-size: large;
+    background-color: #ffffff;
+    color: @header-color;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid 1px;
+    &:hover {
+      background-color: #d2d2d2;
+    }
+  }
+}

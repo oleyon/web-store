@@ -1,0 +1,41 @@
+@import "../../common.less";
+.category-form {
+  max-width: 600px;
+  width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid;
+  background-color: #ffffffae;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: @text-size-large;
+  & input[type="text"] {
+    font-size: @text-size-large;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: black;
+    display: block;
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    }
+  & button {
+    font-size: @text-size-large;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: @header-color;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
