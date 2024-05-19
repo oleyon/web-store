@@ -21,7 +21,8 @@ function Items(props) {
           pageSize: pageSize,
         });
         setItems(response.data.items);
-        setTotalPages(Math.ceil(response.data.totalCount / pageSize));
+        const pages = Math.ceil(response.data.totalCount / pageSize);
+        setTotalPages(pages > 0 ? pages : 1);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
